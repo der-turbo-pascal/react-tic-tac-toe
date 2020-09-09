@@ -15,10 +15,10 @@ class Square extends React.Component {
       <button
         className="square"
         onClick={() => {
-          alert("Ich bin die Zahl " + this.props.value);
+          this.setState({ value: "X" });
         }}
       >
-        {this.props.value}
+        {this.state.value}
       </button>
     );
   }
