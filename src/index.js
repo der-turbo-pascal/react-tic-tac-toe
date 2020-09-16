@@ -21,6 +21,9 @@ class Board extends React.Component {
 
   handleClick(i) {
     const squares = this.state.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
     squares[i] = this.state.xIsNext ? "X" : "O";
     this.setState({
       squares: squares,
@@ -90,7 +93,7 @@ class Game extends React.Component {
 ReactDOM.render(<Game />, document.getElementById("root"));
 
 /**
- * The function  determines if one player has won the game.
+ * The function determines if one player has won the game.
  *
  * The function compares all possibles winning constellations. The constellations are in the "lines" Array.
  * For each constellation the functions grabs the input of these fields. If the specific fields have all the same input (X or O),
