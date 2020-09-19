@@ -96,8 +96,8 @@ ReactDOM.render(<Game />, document.getElementById("root"));
  * The function determines if one player has won the game.
  *
  * The function compares all possibles winning constellations. The constellations are in the "lines" Array.
- * For each constellation the functions grabs the input of these fields. If the specific fields have all the same input (X or O),
- * then one player has won. It then returns the winning symbol.
+ * For each constellation the functions grabs the input of the fields. If the specific fields have all the
+ * same input (X or O), then one player has won. It then returns the winning (symbol) Player.
  *
  * @param {Array} squares
  */
